@@ -7,7 +7,10 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #1B1B1B url(images/overlay.png) repeat;
+		background: #1B1B1B;
+		/*background: 1B1B1B url(images/overlay.png) repeat;
+     background: 333333;
+		*/
 		font-family: 'Varela Round', sans-serif;
 		font-size: 11pt;
 		font-weight: 400;
@@ -260,7 +263,7 @@
 		width: 60px;
 		height: 60px;
 		line-height: 60px;
-		background: #de1c1c;
+		background: #e82225;
 		border-radius: 30px;
 		text-align: center;
 	}
@@ -275,7 +278,7 @@
 		display: inline-block;
 		margin-top: 2em;
 		padding: 0.6em 1em;
-		background: #de1c1c;
+		background: #e82225;
 		border-radius: 4px;
 		line-height: 1.8em;
 		text-decoration: none;
@@ -415,15 +418,16 @@
 		padding: 1em 1.5em;
 		letter-spacing: 0.20em;
 		text-decoration: none;
-		font-size: 0.90em;
+		font-size: 1.0em;
 		font-weight: 600;
 		text-transform: uppercase;
 		outline: 0;
-		color: #3C3C3C;
+		color:#e82225;
 	}
 
 	#menu li:hover a, #menu li.active a, #menu li.active span
 	{
+		color:#306BAC;
 	}
 
 	#menu .current_page_item a
@@ -452,7 +456,7 @@
 
 	#wrapper2
 	{
-		background: #6C2A6A;
+		background: #306BAC;
 	}
 
 	#wrapper3
