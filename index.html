@@ -19,7 +19,8 @@ Released   : 20140207
 <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
 <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.js" integrity="sha256-59/apVFrosMLFX2dHZLGvb3nPpu7e0Yx1rsDr1dTRrk=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js" integrity="sha256-oj52qvIP5c7N6lZZoh9z3OYacAIOjsROAcZBHUaJMyw=" crossorigin="anonymous"></script>
@@ -27,8 +28,8 @@ Released   : 20140207
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css" integrity="sha256-G3IAYJYIQvZgPksNQDbjvxd/Ca1SfCDFwu2s2lt0oGo=" crossorigin="anonymous" /> -->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -138,171 +139,76 @@ Released   : 20140207
 
 
 </div>
-<div id="footer" class="container" style="background-image: url('images/globalbackground_1520x600.jpg');">
+<div id="footer" class="container" >
 
 	<div class="title">
-		<h2>Get in touch</h2>
-		<span class="byline"><p><strong>You can reach out to us for any enquiries you may have. Make your enquiry now</strong></p></span> </div>
+		<h1>Get in touch</h1>
+		<span class="byline"><p style="color:white"><strong>You can reach out to us for any enquiries you may have. Make your enquiry now</strong></p></span>
+  </div>
 
 
 					<a href="contact.html" class="button button-small">Contact Us</a>
 
-<div class="container">
-  <center><h2>Our Partners</h2></center>
 
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
- <ol class="carousel-indicators">
-	 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-	 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
- </ol>
- <div class="carousel-inner">
-	 <div class="carousel-item active">
-		 <img class="d-block w-100" src="carousel/DIVASAFARMAVIC(SPAIN).jpg" alt="First slide" style="width:20%">
-	 </div>
-	 <div class="carousel-item">
-		 <img class="d-block w-100" src="carousel/HENKE SASS WOLF(GERMANY).jpg" alt="Second slide" style="width:20%">
-	 </div>
-	 <div class="carousel-item">
-		 <img class="d-block w-100" src="carousel/FATRO (ITALY).jpg" alt="Third slide" style="width:30%">
-	 </div>
- </div>
- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-	 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	 <span class="sr-only">Previous</span>
- </a>
- <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-	 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	 <span class="sr-only">Next</span>
- </a>
-</div>
+              <center><h2 style="color:white">Our Partners</h2></center> <br/>
+
+              <div id="partners" class="container">
+
+               <div class="owl-carousel owl-theme">
+                   <div> <img src="carousel/FATRO (ITALY).jpg" />  </div>
+                   <div> <img src="carousel/HENKE SASS WOLF(GERMANY).jpg" />  </div>
+                   <div> <img src="carousel/KGGROUP.jpg" />  </div>
+                   <div> <img src="carousel/DIVASAFARMAVIC(SPAIN).jpg" />  </div>
+                   <div> <img src="carousel/DYNTEC.png" />  </div>
+                   <div> <img src="carousel/COSMOS.jpg"/>  </div>
+                  <div> <img src="carousel/MOBEDCO (JORDAN).jpg" />  </div>
+                  <div> <img src="carousel/S.I.N HELLAS (GREECE).png" />  </div>
+                  <div> <img src="carousel/HANGUF.jpg" />  </div>
+               </div>
+             </div>
 
 
+             <script src="owlcarousel/owl.carousel.min.js"></script>
+             <script>
+             $(document).ready(function(){
+               $(".owl-carousel").owlCarousel();
+             });
 
+             var owl = $('.owl-carousel');
+             owl.owlCarousel({
+                 items:4,
+                 loop:true,
+                 margin:10,
+                 autoplay:true,
+                 autoplayTimeout:5000,
+                 autoplayHoverPause:true,
+                 autoplaySpeed:5000
+             });
+             $('.play').on('click',function(){
+                 owl.trigger('play.owl.autoplay',[1000])
+             })
+             $('.stop').on('click',function(){
+                 owl.trigger('stop.owl.autoplay')
+             })
+             </script>
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-      <div class="item active">
-        <img src="carousel/DIVASAFARMAVIC(SPAIN).jpg" alt="DIVASAFARMAVIC" style="width:20%";">
-
-        <!--  <div class="carousel-caption">
-          <h3>Partner A</h3>
-          <p>Role A</p>
-        </div> -->
-
-      </div>
-
-      <div class="item">
-        <img src="carousel/HENKE SASS WOLF(GERMANY).jpg" alt="HENKE SASS WOLF" style="width:20%;">
-
-        <!-- <div class="carousel-caption">
-          <h3>Partner B</h3>
-          <p>Role B</p>
-        </div> -->
-
-      </div>
-
-      <div class="item">
-        <img src="carousel/FATRO (ITALY).jpg" alt="FATRO" style="width:30%;">
-
-       <!--  <div class="carousel-caption">
-          <h3>Partner C</h3>
-          <p>Role C</p>
-        </div> -->
-
-      </div>
-
-
-      <div class="item">
-        <img src="carousel/MOBEDCO (JORDAN).jpg" alt="MOBEDCO" style="width:20%;">
-
-       <!--  <div class="carousel-caption">
-          <h3>Partner C</h3>
-          <p>Role C</p>
-        </div> -->
-
-      </div>
-
-      <div class="item">
-        <img src="carousel/DYNTEC.png" alt="DYNTEC" style="width:30%;">
-
-       <!--  <div class="carousel-caption">
-          <h3>Partner C</h3>
-          <p>Role C</p>
-        </div> -->
-
-      </div>
-
-      <div class="item">
-        <img src="carousel/KGGROUP.jpg" alt="KGGROUP" style="width:20%;">
-
-       <!--  <div class="carousel-caption">
-          <h3>Partner C</h3>
-          <p>Role C</p>
-        </div> -->
-
-      </div>
-
-      <div class="item">
-        <img src="carousel/COSMOS.jpg" alt="COSMOS" style="width:20%;">
-
-       <!--  <div class="carousel-caption">
-          <h3>Partner C</h3>
-          <p>Role C</p>
-        </div> -->
-
-      </div>
-
-      <div class="item">
-        <img src="carousel/S.I.N HELLAS (GREECE).png" alt="S.I.N HELLAS" style="width:20%;">
-
-       <!--  <div class="carousel-caption">
-          <h3>Partner C</h3>
-          <p>Role C</p>
-        </div> -->
-
-      </div>
-
-      <div class="item">
-        <img src="carousel/HANGUF.jpg" alt="HANGUF" style="width:50%;">
-
-       <!--  <div class="carousel-caption">
-          <h3>Partner C</h3>
-          <p>Role C</p>
-        </div> -->
-
-      </div>
 
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+
+
+
+
+
 </div>
 
-
-
-					</div>
-
-</div>
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
+
+</div>
+
+
+
 </body>
 </html>
