@@ -739,4 +739,31 @@
 	}
 
 
-	
+	button.style2,
+	.button.style2 {
+		color: #FFFF;
+		background: #306BAC;
+		box-shadow: inset 0 0 0 1px #306BAC;
+	}
+
+
+	.button {
+		-moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+		-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+		-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+		-webkit-appearance: none;
+		position: relative;
+		display: inline-block;
+		border: 0;
+		background: #e82225;
+		color: #fff;
+		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+		cursor: pointer;
+		text-decoration: none;
+		outline: 0;
+		padding: 1em 3em 1em 3em;
+		text-align: center;
+		border-radius: 3em;
+		font-weight: 400;
+	}
